@@ -7,28 +7,9 @@
 
 <body>
 
-<iframe  scrolling="0"
-        src='https://ricksarkar40096.hippovideo.io/video/embed/6s9bFTYHl4os8CJtf7uDnqOApKE8k8eBPFgcf6olg8g?custom_asset_token=6s9bFTYHl4os8CJtf7uDnqOApKE8k8eBPFgcf6olg8g&hvlk=7WRQWWDWWQY0&org_tok=afGcQIPschdWskyeKXIV0g&autoplay=false' allowfullscreen >
+<iframe  
+        src="https://dai.ly/k4nvWClvCz94h8yPrd1" allowfullscreen >
  </iframe>
-<a href="#" onclick="playPause(); return false;">Play/Pause</a>
-<select id="quality" onchange="changeQuality();">
-  <option value="low">Low Quality</option>
-  <option value="medium">Medium Quality</option>
-  <option value="high">High Quality</option>
-</select>
-
-<script>
-  var frame = document.getElementById("myFrame");
-  var qualitySelect = frame.contentWindow.document.getElementById("quality");
-
-  function playPause() {
-    frame.contentWindow.playPause();
-  }
-
-  function changeQuality() {
-    frame.contentWindow.changeQuality();
-  }
-</script>
 
 
 
