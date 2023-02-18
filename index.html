@@ -7,7 +7,44 @@
 
 <body>
 
-<iframe class='hippo-embed-frame ' width='720' height='405' scrolling='no'  frameborder=0 marginwidth=0 marginheight=0 src='https://ricksarkar40096.hippovideo.io/video/embed/6s9bFTYHl4os8CJtf7uDnqOApKE8k8eBPFgcf6olg8g?custom_asset_token=6s9bFTYHl4os8CJtf7uDnqOApKE8k8eBPFgcf6olg8g&hvlk=7WRQWWDWWQY0&org_tok=afGcQIPschdWskyeKXIV0g&autoplay=false' allowfullscreen ></iframe><script>window.hippoEmbedSeo = "";</script><script src="https://hippo-embed-scripts.s3.amazonaws.com/video-delivery-embed.js" async></script><script>window._hippo_cx_domain = "";var hippo_script=document.createElement("script");hippo_script.src="https://hippo-embed-scripts.s3.amazonaws.com/video-embed-mh.js";document.body.appendChild(hippo_script);</script>
+<iframe  id="myVideo" controls width='720' height='405' scrolling='no'  
+        src='https://ricksarkar40096.hippovideo.io/video/embed/6s9bFTYHl4os8CJtf7uDnqOApKE8k8eBPFgcf6olg8g?custom_asset_token=6s9bFTYHl4os8CJtf7uDnqOApKE8k8eBPFgcf6olg8g&hvlk=7WRQWWDWWQY0&org_tok=afGcQIPschdWskyeKXIV0g&autoplay=false' allowfullscreen >
+ </iframe>
+ 
+ <button onclick="playPause()">Play/Pause</button>
+<select id="quality" onchange="changeQuality()">
+  <option value="low">Low Quality</option>
+  <option value="medium">Medium Quality</option>
+  <option value="high">High Quality</option>
+</select>
+<script>
+  var video = document.getElementById("myVideo");
+  var qualitySelect = document.getElementById("quality");
+
+  function playPause() {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+
+  function changeQuality() {
+    var selectedQuality = qualitySelect.value;
+    if (selectedQuality === "low") {
+      video.src = "my-video-low.mp4";
+    } else if (selectedQuality === "medium") {
+      video.src = "my-video-medium.mp4";
+    } else if (selectedQuality === "high") {
+      video.src = "my-video-high.mp4";
+    }
+    video.load();
+    video.play();
+  }
+</script>
+
+
+
 
  </body>
 
